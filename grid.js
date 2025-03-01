@@ -64,10 +64,6 @@ class Cell {
     return this.#cellElement;
   }
 
-  get tile() {
-    return this.#tile;
-  }
-
   get x() {
     return this.#x;
   }
@@ -75,10 +71,10 @@ class Cell {
   get y() {
     return this.#y;
   }
-
-  get mergeTile() {
-    return this.#mergeTile;
+  get tile() {
+    return this.#tile;
   }
+
   set tile(value) {
     this.#tile = value;
     if (value == null) return;
@@ -86,6 +82,10 @@ class Cell {
     this.#tile.y = this.#y;
   }
 
+  get mergeTile() {
+    return this.#mergeTile;
+  }
+  
   set mergeTile(value) {
     this.#mergeTile = value;
     if (value == null) return;

@@ -1,11 +1,11 @@
 import Grid from "./grid.js";
 import Tile from "./tile.js";
 
-const gameboard = document.getElementById("game-board");
+const gameBoard = document.getElementById("game-board");
 
-const grid = new Grid(gameboard);
-grid.randomEmptyCell().tile = new Tile(gameboard);
-grid.randomEmptyCell().tile = new Tile(gameboard);
+const grid = new Grid(gameBoard);
+grid.randomEmptyCell().tile = new Tile(gameBoard);
+grid.randomEmptyCell().tile = new Tile(gameBoard);
 setupInput();
 
 function setupInput() {
@@ -47,7 +47,7 @@ async function handleInput(e) {
   }
   grid.cells.forEach((cell) => cell.mergeTiles());
 
-  const newTile = new Tile(gameboard);
+  const newTile = new Tile(gameBoard);
   grid.randomEmptyCell().tile = newTile;
 
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
