@@ -1,11 +1,9 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   font-family: Arial;
 }
 
-#body {
+body {
   background-color: #333;
   display: flex;
   justify-content: center;
@@ -30,6 +28,7 @@
   background-color: #aaa;
   border-radius: 1vmin;
 }
+
 .tile {
   position: absolute;
   display: flex;
@@ -39,8 +38,8 @@
   height: var(--cell-size);
   background-color: red;
   border-radius: 1vmin;
-  left: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
-  top: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
   font-weight: bold;
   background-color: hsl(200, 50%, var(--background-lightness));
   color: hsl(200, 25%, var(--text-lightness));
